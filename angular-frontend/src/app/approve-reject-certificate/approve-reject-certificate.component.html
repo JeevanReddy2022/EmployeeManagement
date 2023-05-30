@@ -1,0 +1,34 @@
+<div class="bgc">
+  <div class="container">
+    <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
+      <button routerLink="/manager" class="btn btn-primary" style="margin-right: 10px;">Home</button>
+      CERTIFICATES APPROVAL
+    </h2>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee EmailId</th>
+            <th>Certification Name</th>
+            <th>Issuedate</th>
+            <th>Expirydate</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let certificate of certificates">
+            <td style="color: #ffffff; font-weight: 700;">{{ certificate.emailId }}</td>
+            <td style="color: #ffffff; font-weight: 700;">{{ certificate.name }}</td>
+            <td style="color: #ffffff; font-weight: 700;">{{ certificate.issueDate }}</td>
+            <td style="color: #ffffff; font-weight: 700;">{{ certificate.expiryDate }}</td>
+          <td>
+              <button type="submit" (click)="approveCertificate(certificate.emailId,certificate.issueDate,certificate.expiryDate,certificate.name,certificate.certId)" class="accept-button">Approve</button>
+              <button type="submit" (click)="rejectCertificate(certificate.emailId,certificate.issueDate,certificate.expiryDate,certificate.name,certificate.certId)" class="delete-button">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

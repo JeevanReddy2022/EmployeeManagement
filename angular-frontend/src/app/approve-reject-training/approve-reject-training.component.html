@@ -1,0 +1,34 @@
+<div class="bgc">
+    <div class="container">
+      <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
+        <button routerLink="/manager" class="btn btn-primary" style="margin-right: 10px;">Back</button>
+        TRAININGS APPROVAL
+      </h2>
+  
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee EmailId</th>
+              <th>Training Name</th>
+              <th>Startdate</th>
+              <th>Enddate</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let training of trainings">
+              <td style="color: #ffffff; font-weight: 700;">{{ training.emailId }}</td>
+              <td style="color: #ffffff; font-weight: 700;">{{ training.trainingName }}</td>
+              <td style="color: #ffffff; font-weight: 700;">{{ training.startDate }}</td>
+              <td style="color: #ffffff; font-weight: 700;">{{ training.endDate }}</td>
+            <td>
+                <button type="submit" (click)="approveTraining(training.emailId,training.startDate,training.endDate,training.trainingName,training.trainId)" class="accept-button">Approve</button>
+                <!-- <button type="submit" (click)="rejectCertificate(training.emailId,training.startDate,training.endDate,training.trainingName,training.trainId)" class="delete-button">Reject</button> -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+<div class="bgc">
+  <div class="container">
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <h2
+      style="text-align: center; font-size: large;font-weight: bold;font-family: 'Times New Roman', Times, serif;color: blue;">
+      APPLY LEAVE</h2>
+    <form (ngSubmit)="submitForm()">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Leave Type</th>
+            <th>From Date</th>
+            <th>To Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select [(ngModel)]="selectedLeaveType" name="leaveType" 
+              [(ngModel)]="leave.leaveType">
+               <option *ngFor="let leaveType of leaveTypes" >{{ leaveType }}</option>
+              </select>
+            </td>
+            <td>
+              <input type="date" [(ngModel)]="fromDate" (change)="validateFromDate()" name="fromDate"
+                [(ngModel)]="leave.fromDate">
+            </td>
+            <td>
+              <input type="date" [(ngModel)]="toDate" (change)="validateToDate()" name="toDate"
+                [(ngModel)]="leave.toDate">
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-center">
+        <button class="btn btn-primary mr-1 submit-button" type="submit">Submit</button>
+        <button style="background-color: red;" class="btn btn-secondary" routerLink="/employee"
+          routerLinkActive="active" type="submit">Back</button><br>
+      </div>
+
+    </form>
+  </div>
+</div>

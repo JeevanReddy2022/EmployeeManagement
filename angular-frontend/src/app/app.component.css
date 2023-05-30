@@ -1,0 +1,17 @@
+
+.footer {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* width: 1397px; */
+  height: 50px;
+
+  font-size: 15pt;
+    width:100%;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    color: white;
+    background-color: rgb(26, 45, 222);
+    bottom: 0;
+}
+

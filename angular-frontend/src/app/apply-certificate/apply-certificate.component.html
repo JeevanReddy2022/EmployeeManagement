@@ -1,0 +1,43 @@
+<div class="bgc">
+  <div class="container">
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <h2
+      style="text-align: center; font-size: large;font-weight: bold;font-family: 'Times New Roman', Times, serif;color: blue;">
+      CERTIFICATES</h2>
+    <form (ngSubmit)="submitForm()">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Certification Name</th>
+            <th>Issue Date</th>
+            <th>Expiry Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select [(ngModel)]="selectedcertificateType" name="certificateType" 
+              [(ngModel)]="certification.name">
+               <option *ngFor="let certificateType of certificateTypes" >{{ certificateType }}</option>
+              </select>
+            </td>
+            <td>
+              <input type="date"  [(ngModel)]="issueDate" name="issueDate" [(ngModel)]="certification.issueDate">
+            </td>
+            <td>
+              <input type="date"  [(ngModel)]="expiryDate" name="expiryDate" [(ngModel)]="certification.expiryDate">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-center">
+        <button class="btn btn-primary mr-1 submit-button" type="submit">Submit</button>
+        <button style="background-color: red;" class="btn btn-secondary" routerLink="/employee"
+          routerLinkActive="active" type="submit">Back</button><br>
+      </div>
+
+    </form>
+  </div>
+</div>

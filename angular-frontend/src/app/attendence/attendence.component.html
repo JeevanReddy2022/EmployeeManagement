@@ -1,0 +1,36 @@
+<div class="bgc">
+    <div class="container">
+      <div class="row">
+        <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;font-weight: bold;font-size: x-large;color: rgb(0, 0, 0);">
+          <button routerLink="/employee" class="btn btn-primary" style="margin-right: 10px;">Back</button>ATTENDANCE</h2>
+      </div>
+      <div class="row">
+        <input type="email" [(ngModel)]="email" placeholder="Enter email ID" [(ngModel)]="attendence.emailId">
+      </div>
+      <div class="row">
+        <input type="date" [(ngModel)]="selectedDate" placeholder="Select date" 
+        [(ngModel)]="attendence.date">
+      </div>
+      <div class="row">
+        <button class="button-name" style="color: white;"type="submit" (click)="submitAttendance()">Submit Attendance</button>
+      </div>
+    </div>
+  
+    <div class="container-1">
+      <table style="text-align: center;">
+        <thead style=" background: linear-gradient(360deg, #445251, #83d8c5,rgb(126, 192, 51)); ">
+          <tr style="color: blue;">
+            <th>Employee EmailID</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let attendance of attendanceList">
+            
+            <td>{{ attendance.emailId }}</td>
+            <td>{{ attendance.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

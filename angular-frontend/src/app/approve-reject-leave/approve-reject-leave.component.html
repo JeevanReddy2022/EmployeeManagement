@@ -1,0 +1,33 @@
+<div class="bgc">
+
+    <div class="container">
+        <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
+          <button routerLink="/manager" class="btn btn-primary" style="margin-right: 10px;">Back</button>
+          LEAVE APPLICATIONS
+        </h2><div class="table-container">
+<table>
+    <thead>
+      <tr>
+        <th>Employee EmailId</th>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaveRequests">
+        <td>{{ leave.emailId }}</td>
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.fromDate }}</td>
+        <td>{{ leave.toDate }}</td>
+        <td>
+          <button type="submit" (click)="approveLeave(leave.emailId, leave.fromDate, leave.toDate, leave.leaveType, leave.leaveId)" class="accept-button">Approve</button>
+          <button type="submit" (click)="rejectLeave(leave.emailId, leave.fromDate, leave.toDate, leave.leaveType, leave.leaveId)" class="delete-button">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>

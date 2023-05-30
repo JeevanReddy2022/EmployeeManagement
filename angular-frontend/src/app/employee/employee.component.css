@@ -1,0 +1,103 @@
+
+.bgc {
+    background: linear-gradient(120deg,rgb(232, 220, 179), #a2ebe5, #8785d2);
+  }
+  
+  /* Set the container styles */
+  .bgc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 90vh; */
+    height: 83vh;
+  }
+  
+  /* Set the image container styles */
+  .image-container {
+    width: 100%;
+    padding: 35px;
+    
+  }
+  
+  /* Set the image styles */
+  .image-container img {
+    width: 350px;
+    height: 600px;
+    max-width: 400px;
+  }
+  .card {
+    width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #8bf9a6, #d7ee86);
+    border: 3px solid #3300ff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    transform: translate(-50%, -120%)
+  }
+  
+  .card-body {
+    padding: 20px;
+    font-weight: bold;
+    
+  }
+  .routing-button {
+    background-color: transparent;
+    border: none;
+    color: rgb(107, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    border-radius: 8px;
+    padding: 4px 10px;
+  }
+  
+  .routing-button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+  
+
+  .custom-btn {
+    width: 200px;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .btn-2 {
+    background: #ffffff;
+    background: linear-gradient(to right, #7385c2 0%, #3190bd 100%);
+    border: none;
+  }
+  
+  .btn-2:before {
+    height: 0%;
+    width: 2px;
+  }
+  
+  .btn-2:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  }
+  

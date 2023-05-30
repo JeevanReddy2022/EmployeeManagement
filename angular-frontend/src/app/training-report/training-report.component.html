@@ -1,0 +1,26 @@
+<div class="bgc">
+    <div class="container">
+        <h2 style="text-align:center; font-family: 'Times New Roman', Times, serif;font-weight: bold;color: #ffffff;">
+          <button routerLink="/employee" class="btn btn-primary" style="margin-right: 10px;">Back</button>TRAINING STATUS</h2>
+    <div class="table-container">
+    <table>
+        <thead>
+          <tr>
+            <th>Training Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let training of trainings" style="background: linear-gradient(90deg, #ffffff, #c9cfcf,rgb(255, 255, 255));">
+            <td>{{ training.trainingName }}</td>
+            <td>{{ training.startDate }}</td>
+            <td>{{ training.endDate }}</td>
+            <td>{{ training.trainingStatus }}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+
